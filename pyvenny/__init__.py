@@ -38,5 +38,5 @@ def render_four_set_venn( a, b, c, d, titles={'A': 'A',
     env = Environment(loader=PackageLoader('pyvenny', 'templates'))
     template = env.get_template('four_set_venn.svg')
     
-    return template.render( dict(sections.items() + titles.items()) )
+    return template.render( dict(list(sections.items()) + list(titles.items())) )
 
